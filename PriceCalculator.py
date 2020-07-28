@@ -28,10 +28,10 @@ def calculatecost():
     w.save('grabbed.png')
 
     # YOU NEED THIS FOR FINAL EXECUTABLE
-    pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\Tesseract.exe'
+    # pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\Tesseract.exe'
 
-    # YOU NEED THIS ONE ENABLED FOR TESTING (Don't worry about this problem is solved with above line)
-    # pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Hector\AppData\Local\Tesseract-OCR\tesseract.exe'
+    # YOU NEED THIS ONE ENABLED FOR TESTING (Change path to wherever you installed tesseract)
+    pytesseract.pytesseract.tesseract_cmd = r'D:\Tesseract-OCR\tesseract.exe'
     text = pytesseract.image_to_string(w)
     s = text.replace(",", "")
 

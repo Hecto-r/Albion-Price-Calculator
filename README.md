@@ -4,8 +4,12 @@
 Dependencies:
 
 You need to also download googles tesseract-ocr here: https://github.com/UB-Mannheim/tesseract/wiki
+
 Tesseract OCR: pip install pytesseract
 https://pypi.org/project/pytesseract/
+
+
+Needed for selecting the region:
 
 OpenCV: pip install opencv-python
 https://pypi.org/project/opencv-python/

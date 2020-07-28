@@ -11,3 +11,6 @@ https://pypi.org/project/opencv-python/
 mss: pip install mss
 https://pypi.org/project/mss/
 
+pyinput: pip install pynput
+https://pypi.org/project/pynput/
+

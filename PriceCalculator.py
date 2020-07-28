@@ -174,6 +174,12 @@ def updateregion():
         cv2.destroyAllWindows()
         os.remove('monitor-1.png')
 
+def copy_button():
+    clip = Tk()
+    clip.withdraw()
+    clip.clipboard_clear()
+    clip.clipboard_append(priceLabel.cget("text"))
+    clip.destroy()
 
 # ***END OF SELECTING REGION CODE*** (Could use some refactoring)
 
@@ -181,6 +187,8 @@ def updateregion():
 # GUI GUI GUI
 root = Tk()
 root.title("Price Calculator")
+
+copyButton = Button(root, text="COPY", width=5, command=copy_button)
 
 priceLabel = Label(root, fg="dark green")
 recentLabel = Label(root, fg="red")
@@ -202,12 +210,13 @@ repairCost.grid(row=1, column=0)
 repairButton.grid(row=2, column=0)
 delaySlider.grid(row=3, column=0)
 delayLabel.grid(row=4, column=0)
+regionButton.grid(row=5, column=0)
 
 recentLabel.grid(row=0, column=1)
 priceLabel.grid(row=1, column=1)
-pauseButton.grid(row=2, column=1)
+copyButton.grid(row=2, column = 1)
 startButton.grid(row=3, column=1)
-regionButton.grid(row=4, column=1)
+pauseButton.grid(row=4, column=1)
 
 root.wm_attributes("-topmost", 1)
 root.mainloop()

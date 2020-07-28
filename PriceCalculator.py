@@ -20,7 +20,6 @@ def calculatecost():
     global total
     global delay
     # Grab some screen
-    print(x1, y1, x2, y2)
     screen = ImageGrab.grab(bbox=(x1, y1, x2, y2))
     # Make greyscale
     w = screen.convert('L')
@@ -49,7 +48,10 @@ def calculatecost():
     except ValueError:
         intConversion = 0
     except IndexError:
-        intConversion = int(float(str(s2[0])))
+        try:
+            intConversion = int(float(str(s2[0])))
+        except ValueError:
+            intConversion = 0
 
     total += intConversion
 

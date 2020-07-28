@@ -4,6 +4,7 @@
 Dependencies:
 
 You need to also download googles tesseract-ocr here: https://github.com/UB-Mannheim/tesseract/wiki
+
 Tesseract OCR: pip install pytesseract
 https://pypi.org/project/pytesseract/
 

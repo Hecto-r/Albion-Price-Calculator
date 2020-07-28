@@ -12,7 +12,7 @@ from pynput import keyboard
 total = 0
 after_id = None
 delay = 5
-x1, y1, x2, y2 = 810, 720, 950, 750
+x1, y1, x2, y2 = 828, 691, 1089, 748
 
 
 def calculatecost():
@@ -20,6 +20,7 @@ def calculatecost():
     global total
     global delay
     # Grab some screen
+    print(x1, y1, x2, y2)
     screen = ImageGrab.grab(bbox=(x1, y1, x2, y2))
     # Make greyscale
     w = screen.convert('L')
@@ -33,13 +34,22 @@ def calculatecost():
     # YOU NEED THIS ONE ENABLED FOR TESTING (Change path to wherever you installed tesseract)
     pytesseract.pytesseract.tesseract_cmd = r'D:\Tesseract-OCR\tesseract.exe'
     text = pytesseract.image_to_string(w)
-    s = text.replace(",", "")
+
+    # Replacing commas and new line to put everything into an array
+    s = text.replace(",", "").replace("\n", "")
+    # Removing unnecessary text s2[0] contains Setup Fee s2[2] contains total
+    s2 = re.split(r'[(|)]', s)
 
     try:
         # Convert textblob into string and then int
-        intConversion = int(float(str(s)))
+        if len(s2) == 5:
+            intConversion = int(float(str(s2[4]))) - int(float(str(s2[2])))
+        else:
+            intConversion = int(float(str(s2[2]))) - int(float(str(s2[0])))
     except ValueError:
         intConversion = 0
+    except IndexError:
+        intConversion = int(float(str(s2[0])))
 
     total += intConversion
 

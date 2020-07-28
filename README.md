@@ -2,8 +2,9 @@
 
 ***For Developers only***
 Dependencies:
+
 Tesseract OCR: pip install pytesseract
-https://pypi.org/project/tesseract-ocr/
+https://pypi.org/project/pytesseract/
 
 OpenCV: pip install opencv-python
 https://pypi.org/project/opencv-python/

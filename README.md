@@ -1,5 +1,18 @@
 # Albion-Price-Calculator
 
+<p align = "center">
+  <img align = "center" src = "images/gui.PNG">
+</p>
+
+<p align = "center">
+  <img src = "images/new%20region%20select.PNG">
+</p>
+
+<p align = "center">
+  If you are setting up a new region, you must include the tax like below. (Default region)
+</p>
+
+
 ***For Developers only***
 Dependencies:
 

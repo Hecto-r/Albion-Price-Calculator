@@ -9,7 +9,7 @@
 </p>
 
 <p align = "center">
-  If you are setting up a new region, you must include the tax like below. (Default region)
+  If you are setting up a new region, you must include the tax like shown above. (Default region)
 </p>
 
 

@@ -31,6 +31,7 @@ def calculatecost():
 
     # YOU NEED THIS ONE ENABLED FOR TESTING (Change path to wherever you installed tesseract)
     # pytesseract.pytesseract.tesseract_cmd = r'D:\Tesseract-OCR\tesseract.exe'
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Hector\Desktop\Tesseract-OCR\tesseract.exe'
     text = pytesseract.image_to_string(w)
 
     # Replacing commas and new line to put everything into an array
@@ -61,11 +62,12 @@ def calculatecost():
     priceLabel['font'] = myFont
     recentLabel['font'] = myFont
 
-    if(delay > 1000):
+    if delay > 1000:
         after_id = root.after(delay, calculatecost)
 
 def keyPressed(event=None): #set event to None to take the key argument from .bind
-    calculatecost()
+    if delay == 1000:
+        calculatecost()
 
 
 def startbutton():

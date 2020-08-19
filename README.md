@@ -1,5 +1,10 @@
 # Albion-Price-Calculator
 
+  Since nobody is probably fast enough to use "Delay 1" I have changed that option to a button press.
+  So if you put the slider to Delay 1 it will wait for you to press '+'
+
+
+
 <p align = "center">
   <img align = "center" src = "images/gui.PNG">
 </p>
